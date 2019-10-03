@@ -8,8 +8,6 @@
 I will be satisfied if I can refresh the page to view a new cheerup each time, and easily navigate to create an account/log-in. 
 *Required Features: landing page with random cheerup (need default cheerup database), refreshable, and ability to access the create-account/log-in page from landing page.* 
 
-### Adding Detail/Satisfaction Conditions:
-
 ### MEMBER USER STORY:
 
 **I want to be able to “LIKE” posts so that I can save them to my “LIKED” collection.**  
