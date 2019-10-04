@@ -12,7 +12,7 @@ This project was create to fulfill the requirements for General Assembly's Proje
 
 ### User Stories
 
-The user stories for this application can be found [here](https://github.com/esin87/cheerup/blob/master/user_stories.md). In short, the default user wants to see "cheerups" -- short, positive, and inspiring quotes that cheer up the reader.
+The user stories for this application can be found [here](https://github.com/esin87/cheerup/blob/master/planning/user_stories.md). In short, the default user wants to see "cheerups" -- short, positive, and inspiring quotes that cheer up the reader.
 
 #### Project Management
 
@@ -20,7 +20,7 @@ I used [Trello](trello.com) to break the project into tasks and create to-do lis
 
 #### Wire-framing
 
-I used Balsamiq to create the wireframes for each view (an example [here](https://github.com/esin87/cheerup/blob/master/cheerup!%20wireframes/Home%20Page.png)). These are rough sketches of what I want the finished product to look like.
+I used Balsamiq to create the wireframes for each view (an example [here](https://github.com/esin87/cheerup/blob/master/planning/cheerup!%20wireframes/Show%20Me%20a%20Cheerup%20View.png)). These are rough sketches of what I want the finished product to look like.
 
 ## Technical Details
 
