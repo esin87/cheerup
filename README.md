@@ -1,18 +1,16 @@
 # cheerups!
 
-This app will cheer you up (in progress).
+This app will cheer you up (in progress). The Internet can always use more kindness. Sometimes we're our own harshest critic. This corner of the Internet is for positive vibes, only.
 
 ## Description
 
-The Internet can always use more kindness. Sometimes we're our own harshest critic. This corner of the Internet is for positive vibes, only.
+This project was create to fulfill the requirements for General Assembly's Project 2 in the Software Engineering Immersive Remote program. Cheerup! is my first fullstack web application, built by me from the ground up.
 
 ## Features
 
-List out project features here.
+List out features here.
 
 ## Planning
-
-This project was create to fulfill the requirements for General Assembly's Project 2 in the Software Engineering Immersive Remote program. Cheerup! is my first fullstack web application, built by me from the ground up.
 
 #### User Stories
 
@@ -20,7 +18,11 @@ The user stories for this application can be found [here](https://github.com/esi
 
 #### Project Management
 
-I used [Trello](trello.com) to break the project into tasks and create to-do lists for each task. This not only allowed me to break larger tasks down into bite-size chunks, but seeing the overall progress as I moved more items into the "done" category was highly motivating.
+I used [Trello](trello.com) to break the project into tasks and create to-do lists for each task. This not only allowed me to break larger tasks down into bite-size chunks, but seeing the overall progress as I moved more items into the "done" category was highly motivating. I also planned Bronze (Minimum Viable Product), Silver, and Gold versions of the app:
+
+- **Bronze (Minimum Viable Product):** Meets minimum project requirements. Built using Express, Handlebars, and Mongoose. Has one non-user model (cheerups). Has full CRUD functionality on cheerup model by an user. Repo'ed in GitHub, deployed via Heroku, and validated HTML and CSS.
+- **Silver:** Add user model to database so that registered users are the only ones who can create, update, and delete cheerups.
+- **Gold:** Build out user model further so that a registered user can like cheerups and save them to a collection.
 
 #### Wireframing
 
@@ -34,7 +36,7 @@ Cheerup! runs on a NodeJS/Express server with MongoDB/Mongoose. The file archite
 
 #### Frontend
 
-Handlebars was used to handle page templates with HTML. A static CSS style file is also included. Vanilla JavaScript was used to create user-interactions on individual pages.
+Handlebars was used to handle page templates with HTML. A static CSS style file is also included. Vanilla JavaScript was used to create user-interactions on individual pages. CSS and HTML validators were used to check the code.
 
 #### Other Technical Details
 

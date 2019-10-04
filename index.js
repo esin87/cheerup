@@ -1,6 +1,7 @@
 const express = require('express');
 const parser = require('body-parser');
 const cors = require('cors');
+const methodOverride = require('method-override');
 
 const usersController = require('./controllers/users.js');
 const cheerupsController = require('./controllers/cheerups');
@@ -9,6 +10,9 @@ const cheerupsController = require('./controllers/cheerups');
 const app = express();
 
 //middleware configuration
+app.set('view engine', 'hbs');
+app.use(methodOverride('_method'));
+
 //parser interprets key-value pairs in URLs
 app.use(parser.urlencoded({ extended: true }));
 
