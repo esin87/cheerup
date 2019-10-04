@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection');
+const mongoose = require('../connection');
 
 const CheerupSchema = new mongoose.Schema({
 	body: {
@@ -8,7 +8,8 @@ const CheerupSchema = new mongoose.Schema({
 	likedBy: [
 		{
 			ref: 'User',
-			type: mongoose.Schema.Types.ObjectId
+			type: mongoose.Schema.Types.ObjectId,
+			required: false
 		}
 	]
 });

@@ -1,7 +1,7 @@
 // we're importing mongoose from node_modules
 const mongoose = require('mongoose');
 
-// using native ES6 Promises, in place of mongoose's deprecated mpromise library
+// using native ES6 Promises, in place of mongoose's deprecated promise library
 // `Promise` will provides us with a couple methods: .then() for success,
 // and .catch() for errors
 mongoose.Promise = Promise;
@@ -12,7 +12,7 @@ let mongoURI = '';
 if (process.env.NODE_ENV === 'production') {
 	mongoURI = process.env.DB_URL;
 } else {
-	mongoURI = 'mongodb://localhost/book-e';
+	mongoURI = 'mongodb://localhost/cheerup';
 }
 
 // connect to the database, with the imported mongoose instance

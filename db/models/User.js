@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection.js');
+const mongoose = require('../connection.js');
 
 const UserSchema = mongoose.Schema({
 	userName: {
@@ -14,7 +14,8 @@ const UserSchema = mongoose.Schema({
 	likes: [
 		{
 			ref: 'Cheerup',
-			type: mongoose.Schema.Types.ObjectId
+			type: mongoose.Schema.Types.ObjectId,
+			required: false
 		}
 	]
 });
