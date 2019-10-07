@@ -11,6 +11,26 @@
 
 
 <body>
+    <header>
+        <div id="logo">
+            <a href="/cheerups/">
+                <h1>cheerup!</h1>
+            </a>
+        </div>
+        <div>
+            <nav>
+                <a href="/cheerups/">home</a> |
+                <a href="/cheerups/about/">about</a> |
+                {{#if currentUser}}
+                <a href="/users/logout">log out</a>
+                {{else}}
+                <a href="/users/signup">sign up</a> |
+                <a href="/users/login">log in</a>
+                {{/if}}
+            </nav>
+        </div>
+    </header>
+
     {{{body}}}
 
     <footer>

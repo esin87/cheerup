@@ -1,15 +1,10 @@
 const mongoose = require('../connection.js');
+const bcrypt = require('bcrypt-nodejs');
 
 const UserSchema = mongoose.Schema({
-	userName: {
-		type: String,
-		required: true
-	},
-	password: {
-		type: String,
-		required: true,
-		minlength: 1,
-		maxlength: 15
+	local: {
+		email: String,
+		password: String
 	},
 	likes: [
 		{
@@ -20,6 +15,12 @@ const UserSchema = mongoose.Schema({
 	]
 });
 
-const User = mongoose.model('User', UserSchema);
+UserSchema.methods.encrypt = function(password) {
+	return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
 
-module.exports = User;
+UserSchema.methods.validPassword = function(password) {
+	return bcrypt.compareSync(password, this.local.password);
+};
+
+module.exports = mongoose.model('User', UserSchema);

@@ -16,7 +16,8 @@ header {
 	flex-grow: 2;
 }
 
-.a-button {
+.a-button,
+.btn {
 	display: block;
 	width: 150px;
 	margin: 35px auto;
