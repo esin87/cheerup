@@ -46,14 +46,14 @@ a {
 
 .cheerup {
 	display: block;
-	width: 55%;
+	width: 65%;
 	padding: 30px;
-	margin: 150px auto;
+	margin: 90px auto;
 	background-color: rgba(255, 255, 255, 0.25);
 }
 
 #cheerup-text {
-	font-size: 36px;
+	font-size: 32px;
 }
 
 footer {

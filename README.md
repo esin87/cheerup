@@ -18,7 +18,7 @@ The user stories for this application can be found [here](https://github.com/esi
 
 #### Project Management
 
-I used [Trello](trello.com) to break the project into tasks and create to-do lists for each task. This not only allowed me to break larger tasks down into bite-size chunks, but seeing the overall progress as I moved more items into the "done" category was highly motivating. I also planned Bronze (Minimum Viable Product), Silver, and Gold versions of the app:
+I used [Trello](https://trello.com) to break the project into tasks and create to-do lists for each task. This not only allowed me to break larger tasks down into bite-size chunks, but seeing the overall progress as I moved more items into the "done" category was highly motivating. I also planned Bronze (Minimum Viable Product), Silver, and Gold versions of the app:
 
 - **Bronze (Minimum Viable Product):** Meets minimum project requirements. Built using Express, Handlebars, and Mongoose. Has one non-user model (cheerups). Has full CRUD functionality on cheerup model by any user. Repositoried in GitHub, deployed via Heroku, with validated HTML and CSS.
 - **Silver:** Add user model to database so that registered users are the only ones who can create, update, and delete cheerups.
