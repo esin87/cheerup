@@ -16,6 +16,9 @@ app.use(methodOverride('_method'));
 //parser interprets key-value pairs in URLs
 app.use(parser.urlencoded({ extended: true }));
 
+//configure stylesheet
+app.use('/assets', express.static('public'));
+
 //cors allows communication from all domains
 //app.use(cors());
 
