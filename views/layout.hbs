@@ -5,11 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
     <title>cheerup!</title>
 </head>
 
+
 <body>
     {{{body}}}
+
+    <footer>
+        <p>Made with &hearts; by Esin Saribudak &copy; 2019</p>
+    </footer>
+    <script>
+        const colors = ["#FFBF00", "#0080FF", "#01DF3A", "#FF0080"]
+
+        function randomColor(array) {
+            backgroundColor = array[Math.floor(Math.random() * array.length)];
+            return backgroundColor;
+        }
+
+        document.body.style.backgroundColor = randomColor(colors);
+    </script>
 </body>
+
 
 </html>

@@ -1,6 +1,6 @@
 const express = require('express');
 const parser = require('body-parser');
-const cors = require('cors');
+//const cors = require('cors');
 const methodOverride = require('method-override');
 
 const usersController = require('./controllers/users.js');
@@ -17,7 +17,9 @@ app.use(methodOverride('_method'));
 app.use(parser.urlencoded({ extended: true }));
 
 //cors allows communication from all domains
-app.use(cors());
+//app.use(cors());
+
+//redirect any requests to homepage
 
 //hand off requests on '/users' route to users controller
 app.use('/users/', usersController);
