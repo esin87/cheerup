@@ -9,14 +9,14 @@ router.get('/', (req, res) => {
 });
 
 router.get('/show', (req, res) => {
-	//use aggregate.sample method to return random cheerup
+	//use aggregate sample method to return random cheerup
 	Cheerup.aggregate([{ $sample: { size: 1 } }])
 		.then(cheerup => {
 			return cheerup[0];
 		})
 		.then(cheerup => {
 			console.log(cheerup);
-			res.render('showcheerup', cheerup);
+			res.render('showcheerup', { cheerup });
 		})
 		.catch(err => console.error(err));
 });
