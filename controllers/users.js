@@ -49,12 +49,17 @@ router.get('/logout', (req, res) => {
 });
 
 //GET create page
-router.get('/create', (req, res) => {
+router.get('/create/', (req, res) => {
 	res.render('create');
 });
 
 //create new cheerup
-//router.post();
+router.post('/create/', (req, res) => {
+	Cheerup.create(req.body).then(cheerup => {
+		console.log(cheerup);
+		res.redirect('userhome');
+	});
+});
 
 // Restricted page create/update/delete functionality
 router.get('/', (req, res) => {

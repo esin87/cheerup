@@ -11,6 +11,13 @@ const CheerupSchema = new mongoose.Schema({
 			type: mongoose.Schema.Types.ObjectId,
 			required: false
 		}
+	],
+	createdBy: [
+		{
+			ref: 'User',
+			type: mongoose.Schema.Types.ObjectId,
+			required: false
+		}
 	]
 });
 

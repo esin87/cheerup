@@ -44,7 +44,8 @@ header {
 
 .a-button:hover,
 .btn:hover,
-.show-me-button:hover {
+.show-me-button:hover,
+.create-btn:hover {
 	border: 2px black solid;
 	cursor: pointer;
 }
@@ -223,4 +224,5 @@ footer {
 .create-btn {
 	width: 100px;
 	margin: 25px 50%;
+	border: 2px solid transparent;
 }
