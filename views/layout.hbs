@@ -11,31 +11,35 @@
 
 
 <body>
-    <header>
-        <div id="logo">
-            <a href="/cheerups/">
-                <h1>cheerup!</h1>
-            </a>
-        </div>
-        <div>
-            <nav>
-                <a href="/cheerups/">home</a> |
-                <a href="/cheerups/about/">about</a> |
-                {{#if currentUser}}
-                <a href="/users/logout">log out</a>
-                {{else}}
-                <a href="/users/signup">sign up</a> |
-                <a href="/users/login">log in</a>
-                {{/if}}
-            </nav>
-        </div>
-    </header>
+    <div id="page-content">
+        <header>
+            <div id="logo">
+                <a href="/cheerups/">
+                    <h1>cheerup!</h1>
+                </a>
+            </div>
+            <div>
+                <nav>
+                    <a href="/cheerups/">home</a> |
+                    <a href="/cheerups/about/">about</a> |
+                    {{#if currentUser}}
+                    <a href="/users/logout">log out</a>
+                    {{else}}
+                    <a href="/users/signup">sign up</a> |
+                    <a href="/users/login">log in</a>
+                    {{/if}}
+                </nav>
+            </div>
+        </header>
 
-    {{{body}}}
+        <div id="hbs-body">
+            {{{body}}}
+        </div>
 
-    <footer>
-        <p>made with &hearts; by esin saribudak &copy; 2019</p>
-    </footer>
+        <footer>
+            <p>made with &hearts; by esin saribudak &copy; 2019</p>
+        </footer>
+    </div>
     <script>
         const colors = ["rgba(255, 191, 0, .25)", "rgba(0, 128, 255, .25)", "rgba(1, 223, 58, .25)", "rgba(255, 0, 128, .25)"]
 

@@ -4,7 +4,7 @@ This app will cheer you up (in progress). The Internet can always use more kindn
 
 ## Description
 
-This project was create to fulfill the requirements for General Assembly's Project 2 in the Software Engineering Immersive Remote program. Cheerup! is my first fullstack web application, built by me from the ground up.
+This project was designed to fulfill the requirements for General Assembly's Project 2 in the Software Engineering Immersive Remote program. Cheerup! is my first fullstack web application, built by me from the ground up.
 
 ## Features
 
@@ -44,10 +44,15 @@ The code was written in Visual Studio Code. The Prettier, Code Spell Checker, an
 
 ## Installation Instructions
 
+This application is fully deployed and can be used by anyone with a browser at the link above.
+
+To test out the code yourself, clone this repository to your local machine. You should already have Node, Nodemon, and MongoDB installed globally on your computer. Then in terminal, in the project directory, run "npm install" in the CLI to download the Node packages needed for this program. In a separate CLI tab, run "mongod" to initiate the Mongo database. Still in the project directory, run "node db/seed.js" in the CLI to seed the database with cheerups. Then in the CLI run "nodemon index.js". If you open a browser window and navigate to "localhost:8080/" you will be able to run the program while it's hosted on your own computer.
+
 ## Unsolved Problems
 
-- The log-in page does not check that the email address is actually an email address. Users can enter any string as their "email" and be allowed to register. I need to figure out how to write logic in my Passport code that checks that the entry is an email address.
+- The log-in page does not check that the email address is actually an email address. Users can enter any string of characters into the "email" field and be allowed to register. I need to figure out how to write logic in my Passport code that checks that the entry is an email address.
 
 ## Future Directions
 
 - Adding OAuthorize
+- Allowing registered users to view the cheerups! of other users. 
