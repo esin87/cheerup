@@ -34,4 +34,18 @@ router.get('/show', (req, res) => {
 		.catch(err => console.error(err));
 });
 
+router.get('/edit/:id', (req, res) => {
+	Cheerup.findOne({ _id: req.params.id }).then(cheerup => {
+		res.render('edit', { cheerup });
+	});
+});
+
+router.put('/:id', (req, res) => {
+	Cheerup.findOneAndUpdate({ _id: req.params.id }, req.body, {
+		new: true
+	}).then(cheerup => {
+		res.render('showcheerup', { cheerup });
+	});
+});
+
 module.exports = router;

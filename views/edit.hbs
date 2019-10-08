@@ -1,0 +1,31 @@
+<div class="edit">
+    <h2>edit cheerup!</h2>
+
+    <form method="post" action="/cheerups/{{cheerup._id}}?_method=put">
+
+        <div class="form-group">
+            <label for="text">text (limit 140 characters)</label>
+            <input id="create-text" name="body" cols="50" rows"10" value="{{cheerup.body}}"
+                onkeydown="textCounter(this, 'create-length', 140);" onkeyup="textCounter(this, 'create-length', 140)">
+
+            </input>
+            <input style="width:40px;font-size:12pt;font-style:italic;text-align:center;margin:5px" readonly="readonly"
+                type="text" id='create-length' name="create-length" size="3" maxlength="3" value="" /> characters
+            left</i>
+        </div>
+
+        <input class="create-btn" type="submit" value="let's do this!">
+    </form>
+</div>
+
+<script>
+    function textCounter(field, cnt, maxlimit) {
+        var cntfield = document.getElementById(cnt)
+        if (field.value.length > maxlimit) {
+            field.value = field.value.substring(0, maxlimit);
+        } else {
+            cntfield.value = maxlimit - field.value.length;
+        }
+    }
+</script>
+{{!-- learned how to do character count from https://stackoverflow.com/questions/19962608/javascript-character-count --}}

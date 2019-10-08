@@ -1,18 +1,25 @@
 <div class="cheerup">
     <div class="edit-controls">
         {{#if currentUser}}
-        <a href="users/likes/">add to favorites</a> |
-        <a href="/users/edit">edit</a> |
-        <form id="delete-link" action="/cheerups/{{cheerup._id}}?_method=delete" method="post">
-            <input id="delete-link" type="submit" value="delete">
-        </form>
+        {{!-- <div>
+            <a href="#">[add to favorites - coming soon!] </a>
+        </div> --}}
+        <div>
+            <a href="/cheerups/edit/{{cheerup._id}}"> [edit] </a>
+        </div>
+        <div id="delete-link">
+            <form action="/cheerups/{{cheerup._id}}?_method=delete" method="post">
+                <input id="delete-link" type="submit" value="[delete]">
+            </form>
+        </div>
         {{/if}}
     </div>
+
     <div>
         <span id="cheerup-text">{{cheerup.body}}</span>
     </div>
+
     <div class="a-button">
         <a href="/cheerups/show">show me another!</a>
     </div>
-
 </div>
