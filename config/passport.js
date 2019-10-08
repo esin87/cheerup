@@ -30,7 +30,7 @@ module.exports = function(passport) {
 							false,
 							req.flash(
 								'signupMessage',
-								'Hey buddy, the email is already taken!!'
+								'hey friend, that email is already taken!'
 							)
 						);
 					} else {
@@ -64,14 +64,14 @@ module.exports = function(passport) {
 						return callback(
 							null,
 							false,
-							req.flash('loginMessage', 'No user found')
+							req.flash('loginMessage', 'no user found.')
 						);
 					}
 					if (!user.validPassword(password)) {
 						return callback(
 							null,
 							false,
-							req.flash('loginMessage', 'Ooops, wrong password')
+							req.flash('loginMessage', 'oops, wrong password!')
 						);
 					}
 					return callback(null, user);

@@ -1,21 +1,23 @@
 <div class="cheerup">
-    <h2>Sign up</h2>
+    <h2>sign up</h2>
 
-    {{#if message}}
-    <div class="alert alert-danger">{{message}}</div>
-    {{/if}}
+    <div class="message">
+        {{#if message}}
+        <div class="alert alert-danger">{{message}}</div>
+        {{/if}}
+    </div>
 
     <form method="post" action="/users/signup">
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">email</label>
             <input class="form-control" type="text" name="email" id="email">
         </div>
 
         <div class="form-group">
-            <label for="email">Password</label>
+            <label for="email">password</label>
             <input class="form-control" type="password" name="password" id="password">
         </div>
 
-        <input class="btn btn-default" type="submit">
+        <input class="btn btn-default" type="submit" value="let's do this!">
     </form>
 </div>

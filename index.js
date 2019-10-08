@@ -47,7 +47,9 @@ app.use('/assets', express.static('public'));
 //app.use(cors());
 
 //redirect any requests to homepage
-
+app.get('/', (req, res) => {
+	res.redirect('/cheerups/');
+});
 //hand off requests on '/users' route to users controller
 app.use('/users/', usersController);
 //hands off requests on '/cheerups' to cheerups controller

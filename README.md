@@ -32,7 +32,7 @@ I used Balsamiq to create the wireframes for each view (an example [here](https:
 
 #### Backend
 
-Cheerup! runs on a NodeJS/Express server with MongoDB/Mongoose. The file architecture follows the Model-View-Controller schema. The app was deployed using Heroku and MongoDB Atlas. Registered users have full CRUD functionality implemented with RESTful routes.
+Cheerup! runs on a NodeJS/Express server with MongoDB/Mongoose. The file architecture follows the Model-View-Controller schema. The app was deployed using Heroku and MongoDB Atlas. Users can sign up for an account using Passport authorization. Registered users have full CRUD functionality implemented with RESTful routes.
 
 #### Frontend
 
@@ -46,4 +46,8 @@ The code was written in Visual Studio Code. The Prettier, Code Spell Checker, an
 
 ## Unsolved Problems
 
+- The log-in page does not check that the email address is actually an email address. Users can enter any string as their "email" and be allowed to register. I need to figure out how to write logic in my Passport code that checks that the entry is an email address.
+
 ## Future Directions
+
+- Adding OAuthorize

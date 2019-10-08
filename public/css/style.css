@@ -19,16 +19,17 @@ header {
 .a-button,
 .btn {
 	display: block;
-	width: 150px;
+	width: 155px;
 	margin: 35px auto;
 	text-align: center;
-	border: 1px transparent solid;
+	border: 2px transparent solid;
 	padding: 10px 20px;
 	background-color: white;
 }
 
-.a-button:hover {
-	border: 1px black solid;
+.a-button:hover,
+.btn:hover {
+	border: 2px black solid;
 	cursor: pointer;
 }
 
@@ -50,11 +51,44 @@ a {
 	width: 65%;
 	padding: 30px;
 	margin: 90px auto;
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: rgba(255, 255, 255, 0.35);
 }
 
 #cheerup-text {
 	font-size: 32px;
+}
+
+#cheerup-text a {
+	background-color: white;
+	padding: 5px;
+}
+
+.message {
+	height: 15px;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.alert {
+	margin: 20px 0;
+}
+
+.form-group {
+	padding: 5px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+input {
+	outline: none;
+	width: 100%;
+	padding: 10px;
+	font-size: 14px;
+	border: solid 2px transparent;
+}
+
+input:focus {
+	border: solid 2px black;
 }
 
 footer {
