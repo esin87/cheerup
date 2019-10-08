@@ -15,9 +15,7 @@ router.get('/signup', (req, res) => {
 // POST /signup
 router.post('/signup', (req, res) => {
 	var signupStrategy = passport.authenticate('local-signup', {
-		successRedirect: router.get('/:id', (req, res) => {
-			User.findOne({ _id: req.params.id }).then(res.render('userhome'));
-		}),
+		successRedirect: '/users/' + user.local.email,
 		failureRedirect: '/users/signup',
 		failureFlash: true
 	});
@@ -33,9 +31,7 @@ router.get('/login', (req, res) => {
 // POST /login
 router.post('/login', (req, res) => {
 	var loginProperty = passport.authenticate('local-login', {
-		successRedirect: router.get('/:id', (req, res) => {
-			User.findOne({ _id: req.params.id }).then(res.render('userhome'));
-		}),
+		successRedirect: '/users/' + req.body.email,
 		failureRedirect: '/users/login',
 		failureFlash: true
 	});
@@ -53,10 +49,13 @@ router.get('/create/', (req, res) => {
 	res.render('create');
 });
 
-
 // Restricted page create/update/delete functionality
+router.get('/:email', (req, res) => {
+	User.findOne({ email: req.params.email }).then(res.render('userhome'));
+});
+
 router.get('/', (req, res) => {
-	User.findOne({ _id: req.params.id }).then(res.render('userhome'));
+	res.render('userhome');
 });
 
 module.exports = router;
