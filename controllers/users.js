@@ -7,10 +7,6 @@ const passport = require('passport');
 const Cheerup = require('../db/models/Cheerup');
 const User = require('../db/models/User');
 
-router.get('/', (req, res) => {
-	res.render('userhome');
-});
-
 // GET /signup
 router.get('/signup', (req, res) => {
 	res.render('signup.hbs', { message: req.flash('signupMessage') });
@@ -19,7 +15,9 @@ router.get('/signup', (req, res) => {
 // POST /signup
 router.post('/signup', (req, res) => {
 	var signupStrategy = passport.authenticate('local-signup', {
-		successRedirect: '/users/',
+		successRedirect: router.get('/:id', (req, res) => {
+			User.findOne({ _id: req.params.id }).then(res.render('userhome'));
+		}),
 		failureRedirect: '/users/signup',
 		failureFlash: true
 	});
@@ -35,7 +33,9 @@ router.get('/login', (req, res) => {
 // POST /login
 router.post('/login', (req, res) => {
 	var loginProperty = passport.authenticate('local-login', {
-		successRedirect: '/users/',
+		successRedirect: router.get('/:id', (req, res) => {
+			User.findOne({ _id: req.params.id }).then(res.render('userhome'));
+		}),
 		failureRedirect: '/users/login',
 		failureFlash: true
 	});
@@ -48,10 +48,17 @@ router.get('/logout', (req, res) => {
 	res.redirect('/');
 });
 
+//GET create page
+router.get('/create', (req, res) => {
+	res.render('create');
+});
+
+//create new cheerup
+//router.post();
+
 // Restricted page create/update/delete functionality
-// router.get('/userhome', (req, res) => {
-// 	if (req.isAuthenticated()) res.render('userhome');
-// 	res.render('cheerup');
-// });
+router.get('/', (req, res) => {
+	User.findOne({ _id: req.params.id }).then(res.render('userhome'));
+});
 
 module.exports = router;

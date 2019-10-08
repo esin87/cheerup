@@ -12,6 +12,13 @@ const UserSchema = mongoose.Schema({
 			type: mongoose.Schema.Types.ObjectId,
 			required: false
 		}
+	],
+	userCreated: [
+		{
+			ref: 'Cheerup',
+			type: mongoose.Schema.Types.ObjectId,
+			required: false
+		}
 	]
 });
 

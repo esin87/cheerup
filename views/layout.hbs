@@ -20,7 +20,11 @@
             </div>
             <div>
                 <nav>
+                    {{#if currentUser}}
+                    <a href="/users/">my home</a> |
+                    {{else}}
                     <a href="/cheerups/">home</a> |
+                    {{/if}}
                     <a href="/cheerups/about/">about</a> |
                     {{#if currentUser}}
                     <a href="/users/logout">log out</a>

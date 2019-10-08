@@ -1,6 +1,16 @@
 <div class="cheerup">
-    <span id="cheerup-text">{{cheerup.body}}</span>
+    <div class="edit-controls">
+        {{#if currentUser}}
+        <a href="users/likes/">add to favorites</a> |
+        <a href="/users/edit">edit</a> |
+        <a href="/users/delete/">delete</a>
+        {{/if}}
+    </div>
+    <div>
+        <span id="cheerup-text">{{cheerup.body}}</span>
+    </div>
     <div class="a-button">
         <a href="/cheerups/show">show me another!</a>
     </div>
+
 </div>
