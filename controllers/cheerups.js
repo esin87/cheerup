@@ -4,6 +4,13 @@ const router = express.Router();
 const Cheerup = require('../db/models/Cheerup');
 const User = require('../db/models/User');
 
+//delete a cheerup by ID
+router.delete('/:id', (req, res) => {
+	Cheerup.findOneAndRemove({ _id: req.params.id }).then(() => {
+		res.render('userhome');
+	});
+});
+
 //home page route
 router.get('/', (req, res) => {
 	res.render('index');

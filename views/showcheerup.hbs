@@ -3,7 +3,9 @@
         {{#if currentUser}}
         <a href="users/likes/">add to favorites</a> |
         <a href="/users/edit">edit</a> |
-        <a href="/users/delete/">delete</a>
+        <form id="delete-link" action="/cheerups/{{cheerup._id}}?_method=delete" method="post">
+            <input id="delete-link" type="submit" value="delete">
+        </form>
         {{/if}}
     </div>
     <div>

@@ -226,3 +226,15 @@ footer {
 	margin: 25px 50%;
 	border: 2px solid transparent;
 }
+
+/* #delete-link form {
+	display: inline-block;
+	background-color: none;
+} */
+
+#delete-link input {
+	display: inline-block;
+	background: none;
+	width: 75px;
+	margin-right: -15px;
+}
