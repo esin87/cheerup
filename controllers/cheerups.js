@@ -34,12 +34,21 @@ router.get('/show', (req, res) => {
 		.catch(err => console.error(err));
 });
 
+//create new cheerup
+router.post('/create/', (req, res) => {
+	Cheerup.create(req.body).then(cheerup => {
+		res.render('showcheerup', { cheerup });
+	});
+});
+
+//edit cheerup by id
 router.get('/edit/:id', (req, res) => {
 	Cheerup.findOne({ _id: req.params.id }).then(cheerup => {
 		res.render('edit', { cheerup });
 	});
 });
 
+//send updates and display edited cheerup
 router.put('/:id', (req, res) => {
 	Cheerup.findOneAndUpdate({ _id: req.params.id }, req.body, {
 		new: true

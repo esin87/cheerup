@@ -53,14 +53,6 @@ router.get('/create/', (req, res) => {
 	res.render('create');
 });
 
-//create new cheerup
-router.post('/create/', (req, res) => {
-	Cheerup.create(req.body).then(cheerup => {
-		//User.user
-		console.log({ cheerup });
-		res.redirect('userhome');
-	});
-});
 
 // Restricted page create/update/delete functionality
 router.get('/', (req, res) => {
