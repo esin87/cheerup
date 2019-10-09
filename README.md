@@ -1,5 +1,7 @@
 # cheerups!
 
+<img alt="cheerup! home page" src="images/cheerup_home.png" width="500px">
+
 This app will cheer you up. The Internet can always use more kindness. Sometimes we're our own harshest critic. This corner of the Internet is for positive vibes, only.
 
 ## Description
@@ -34,11 +36,30 @@ I used Balsamiq to create the wireframes for each view (an example [here](https:
 
 #### Backend
 
-Cheerup! runs on a NodeJS/Express server with MongoDB/Mongoose. The file architecture follows the Model-View-Controller schema. The app was deployed using Heroku and MongoDB Atlas. Users can sign up for an account using Passport authorization. Registered users have full CRUD functionality implemented with RESTful routes.
+Cheerup! runs on a NodeJS/Express server with MongoDB/Mongoose. The file architecture follows the Model-View-Controller schema. Below is an excerpt from my cheerups controller file.
+
+```javascript
+//show random cheerup to unregistered users
+router.get('/show', (req, res) => {
+	//use aggregate sample method to return random cheerup
+	Cheerup.aggregate([{ $sample: { size: 1 } }])
+		.then(cheerup => {
+			return cheerup[0];
+		})
+		.then(cheerup => {
+			res.render('showcheerup', { cheerup });
+		})
+		.catch(err => console.error(err));
+});
+```
+
+The app was deployed using Heroku and MongoDB Atlas. Users can sign up for an account using Passport authorization. Registered users have full CRUD functionality implemented with RESTful routes.
 
 #### Frontend
 
-Handlebars was used to handle page templates with HTML. A static CSS style file is also included. Vanilla JavaScript and DOM manipulation was used to create user-interactions on individual pages, such as the changing background color or word counter. CSS and HTML validators were used to check the code.
+Handlebars was used to handle page templates with HTML. A static CSS style file is also included. Vanilla JavaScript and DOM manipulation was used to create user-interactions on individual pages, such as the changing background color or word counter. CSS and HTML validators were used to check the code. The styling is also responsive to smaller mobile screens through the use of a media query, as seen below.
+
+<img src="images/cheerup-mobile-view.png" alt="cheerup mobile view">
 
 #### Other Technical Details
 
@@ -59,4 +80,3 @@ To test out the code yourself, clone this repository to your local machine. You 
 - Complete Gold level plan
 - Adding OAuthorize
 - Allowing registered users to view the cheerups! of other users.
-- Mobile responsiveness
