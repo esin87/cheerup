@@ -9,53 +9,53 @@ const User = require('../db/models/User');
 
 // GET /signup
 router.get('/signup', (req, res) => {
-	res.render('signup.hbs', { message: req.flash('signupMessage') });
+  res.render('signup.hbs', { message: req.flash('signupMessage') });
 });
 
 // POST /signup
 router.post('/signup', (req, res) => {
-	var signupStrategy = passport.authenticate('local-signup', {
-		successRedirect: '/users/' + req.body.email,
-		failureRedirect: '/users/signup',
-		failureFlash: true
-	});
+  var signupStrategy = passport.authenticate('local-signup', {
+    successRedirect: '/users/' + req.body.email,
+    failureRedirect: '/users/signup',
+    failureFlash: true
+  });
 
-	return signupStrategy(req, res);
+  return signupStrategy(req, res);
 });
 
 // GET /login
 router.get('/login', (req, res) => {
-	res.render('login.hbs', { message: req.flash('loginMessage') });
+  res.render('login.hbs', { message: req.flash('loginMessage') });
 });
 
 // POST /login
 router.post('/login', (req, res) => {
-	var loginProperty = passport.authenticate('local-login', {
-		successRedirect: '/users/' + req.body.email,
-		failureRedirect: '/users/login',
-		failureFlash: true
-	});
+  var loginProperty = passport.authenticate('local-login', {
+    successRedirect: '/users/' + req.body.email,
+    failureRedirect: '/users/login',
+    failureFlash: true
+  });
 
-	return loginProperty(req, res);
+  return loginProperty(req, res);
 });
 // GET /logout
 router.get('/logout', (req, res) => {
-	req.logout();
-	res.redirect('/');
+  req.logout();
+  res.redirect('/');
 });
 
 //GET create page
 router.get('/create/', (req, res) => {
-	res.render('create');
+  res.render('create');
 });
 
 // Restricted page create/update/delete functionality
 router.get('/:email', (req, res) => {
-	User.findOne({ email: req.params.email }).then(res.render('userhome'));
+  User.findOne({ email: req.params.email }).then(res.render('userhome'));
 });
 
 router.get('/', (req, res) => {
-	res.render('userhome');
+  res.render('userhome');
 });
 
 module.exports = router;
