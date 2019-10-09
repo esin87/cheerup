@@ -1,6 +1,6 @@
 # cheerups!
 
-This app will cheer you up (in progress). The Internet can always use more kindness. Sometimes we're our own harshest critic. This corner of the Internet is for positive vibes, only.
+This app will cheer you up. The Internet can always use more kindness. Sometimes we're our own harshest critic. This corner of the Internet is for positive vibes, only.
 
 ## Description
 
@@ -8,21 +8,23 @@ This project was designed to fulfill the requirements for General Assembly's Pro
 
 ## Features
 
-List out features here.
+Currently at the Silver level: project includes all the features of my Bronze/MVP plan as well as user registration so that authenticated users can create, edit and delete cheerups.
 
 ## Planning
 
 #### User Stories
 
-The user stories for this application can be found [here](https://github.com/esin87/cheerup/blob/master/planning/user_stories.md). In short, the default user wants to see "cheerups" -- short, positive, and inspiring quotes that cheer up the reader.
+The user stories for this application can be found [here](https://github.com/esin87/cheerup/blob/master/planning/user_stories.md). In short, the user wants to see "cheerups" -- short, positive, and inspiring quotes that cheer up the reader.
 
 #### Project Management
 
-I used [Trello](https://trello.com) to break the project into tasks and create to-do lists for each task. This not only allowed me to break larger tasks down into bite-size chunks, but seeing the overall progress as I moved more items into the "done" category was highly motivating. I also planned Bronze (Minimum Viable Product), Silver, and Gold versions of the app:
+I used [Trello](https://trello.com) to break the project into tasks and create to-do lists for each task. This not only allowed me to break larger tasks down into bite-size chunks, but seeing the overall progress as I moved more items into the "done" category was highly motivating.
+
+I also planned Bronze (Minimum Viable Product), Silver, and Gold versions of the app:
 
 - **Bronze (Minimum Viable Product):** Meets minimum project requirements. Built using Express, Handlebars, and Mongoose. Has one non-user model (cheerups). Has full CRUD functionality on cheerup model by any user. Repositoried in GitHub, deployed via Heroku, with validated HTML and CSS.
-- **Silver:** Add user model to database so that registered users are the only ones who can create, update, and delete cheerups.
-- **Gold:** Build out user model further so that a registered user can like cheerups and save them to a collection.
+- **Silver:** Add user model to database with Passport authentication, so that registered users are the only ones who can create, update, and delete cheerups.
+- **Gold:** Build out user model further so that a registered user can like cheerups and save them to a liked collection, and also save their own created cheerups to their personal collection.
 
 #### Wireframing
 
@@ -36,7 +38,7 @@ Cheerup! runs on a NodeJS/Express server with MongoDB/Mongoose. The file archite
 
 #### Frontend
 
-Handlebars was used to handle page templates with HTML. A static CSS style file is also included. Vanilla JavaScript was used to create user-interactions on individual pages. CSS and HTML validators were used to check the code.
+Handlebars was used to handle page templates with HTML. A static CSS style file is also included. Vanilla JavaScript and DOM manipulation was used to create user-interactions on individual pages, such as the changing background color or word counter. CSS and HTML validators were used to check the code.
 
 #### Other Technical Details
 
@@ -44,7 +46,7 @@ The code was written in Visual Studio Code. The Prettier, Code Spell Checker, an
 
 ## Installation Instructions
 
-This application is fully deployed and can be used by anyone with a browser at the link above.
+This application is fully deployed and can be used by anyone with a browser at this [link](https://esins-cheerup-app.herokuapp.com/cheerups/).
 
 To test out the code yourself, clone this repository to your local machine. You should already have Node, Nodemon, and MongoDB installed globally on your computer. Then in terminal, in the project directory, run "npm install" in the CLI to download the Node packages needed for this program. In a separate CLI tab, run "mongod" to initiate the Mongo database. Still in the project directory, run "node db/seed.js" in the CLI to seed the database with cheerups. Then in the CLI run "nodemon index.js". If you open a browser window and navigate to "localhost:8080/" you will be able to run the program while it's hosted on your own computer.
 
@@ -54,5 +56,7 @@ To test out the code yourself, clone this repository to your local machine. You 
 
 ## Future Directions
 
+- Complete Gold level plan
 - Adding OAuthorize
-- Allowing registered users to view the cheerups! of other users. 
+- Allowing registered users to view the cheerups! of other users.
+- Mobile responsiveness

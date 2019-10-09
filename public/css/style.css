@@ -45,7 +45,9 @@ header {
 .a-button:hover,
 .btn:hover,
 .show-me-button:hover,
-.create-btn:hover {
+.create-btn:hover,
+#about-link:hover,
+#create:hover {
 	border: 2px black solid;
 	cursor: pointer;
 }
@@ -53,6 +55,7 @@ header {
 a {
 	color: black;
 	text-decoration: none;
+	border: 2px solid transparent;
 }
 
 h2 {
@@ -148,9 +151,17 @@ footer {
 	text-align: center;
 }
 
+#user-home-display {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+}
+
 #create,
 #see-another {
-	border: 2px solid black;
+	border: 2px solid transparent;
 	height: 150px;
 	width: 200px;
 	display: flex;
@@ -250,4 +261,138 @@ footer {
 	width: 700px;
 	display: block;
 	margin: 0 auto;
+}
+
+@media (max-width: 825px) {
+	body {
+		max-width: 95%;
+	}
+
+	header {
+		font-size: 90%;
+	}
+
+	.user-header {
+		flex-direction: column;
+	}
+
+	.user-header h2 {
+		margin: 0px;
+	}
+
+	#user-home-display {
+		flex-direction: column;
+	}
+
+	.home,
+	.cheerup,
+	.about,
+	.signup-login {
+		margin: 20px;
+	}
+
+	.cheerup {
+		height: 325px;
+	}
+
+	.form-group {
+		width: 180px;
+		margin-left: -5px;
+	}
+	.about {
+		height: 345px;
+	}
+
+	#about-link {
+		padding: 1px;
+	}
+
+	.about h2,
+	.signup-login h2 {
+		margin: 5px 0;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	.message {
+		font-size: 12px;
+		color: red;
+	}
+
+	.about p {
+		font-size: 14px;
+	}
+
+	.home p {
+		font-size: 125%;
+	}
+
+	.cheerup-text {
+		font-size: 24px;
+	}
+
+	.home h2,
+	.edit h2 {
+		font-size: 24px;
+	}
+
+	.btn {
+		font-size: 12px;
+		margin-left: -30px;
+	}
+
+	.a-button {
+		font-size: 12px;
+		width: 40%;
+		margin-left: -28px;
+	}
+
+	a.show-me-button {
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+	.edit-controls,
+	input#delete-link {
+		font-size: 11px;
+	}
+
+	.edit .create-btn {
+		margin: 0 auto;
+	}
+
+	.edit {
+		width: 200px;
+		margin: 10px;
+	}
+
+	.create h2 {
+		font-size: 20px;
+	}
+
+	.create form {
+		margin: 0 auto;
+	}
+
+	#create-text {
+		width: 250px;
+	}
+
+	.form-group {
+		font-size: 11px;
+	}
+
+	.create-btn {
+		background-color: white;
+	}
+
+	.create label,
+	#create-length {
+		font-size: 11px;
+	}
+
+	footer {
+		font-size: 10px;
+		bottom: 0px;
+		height: 35px;
+	}
 }
