@@ -32,9 +32,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function(req, res, next) {
-	console.log(req.user);
-	res.locals.currentUser = req.user;
-	next();
+  console.log(req.user);
+  res.locals.currentUser = req.user;
+  next();
 });
 
 //parser interprets key-value pairs in URLs
@@ -48,7 +48,7 @@ app.use('/assets', express.static('public'));
 
 //redirect any requests to homepage
 app.get('/', (req, res) => {
-	res.redirect('/cheerups/');
+  res.redirect('/cheerups/');
 });
 //hand off requests on '/users' route to users controller
 app.use('/users/', usersController);
@@ -58,5 +58,5 @@ app.use('/cheerups/', cheerupsController);
 app.set('port', process.env.PORT || 8080);
 
 app.listen(app.get('port'), () => {
-	console.log(`✅ PORT: ${app.get('port')} 🌟`);
+  console.log(`✅ PORT: ${app.get('port')} 🌟`);
 });
