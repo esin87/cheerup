@@ -32,7 +32,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function(req, res, next) {
-	console.log(req.user);
 	res.locals.currentUser = req.user;
 	next();
 });
